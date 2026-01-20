@@ -1,0 +1,75 @@
+.task-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  min-height: 120px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.task-item.overdue {
+  border-color: var(--accent-danger);
+  background: rgba(239, 68, 68, 0.08);
+
+  box-shadow:
+    0 10px 25px rgba(239, 68, 68, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+@media (hover: none) {
+  .task-item:hover {
+    transform: none;
+  }
+}
+
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.task-date {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.task-actions {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.filter-bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
