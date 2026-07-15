@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   actionhub:
-    image: sachinkumar1597/actionhub:v1
+    image: sachink1597/actionhub:v1
     container_name: actionhub-container
 
     ports:
