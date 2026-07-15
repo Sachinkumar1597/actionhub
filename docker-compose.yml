@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  actionhub:
+    image: sachinkumar1597/actionhub:v1
